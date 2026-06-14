@@ -16,10 +16,10 @@ export function SiteHeader() {
   const [mobileServices, setMobileServices] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display text-2xl tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-foreground text-background font-sans text-sm font-bold">A</span>
+        <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-glow text-accent-foreground text-sm font-bold shadow-glow">A</span>
           <span>aargu</span>
         </Link>
 
