@@ -61,7 +61,7 @@ function ServiceDetail() {
             </p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">
-            {svc.bullets.map((b) => (
+            {svc.bullets.map((b: string) => (
               <li key={b} className="flex items-start gap-3 rounded-xl border border-border bg-surface-elevated p-5">
                 <Check className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 <span className="text-sm font-medium">{b}</span>
