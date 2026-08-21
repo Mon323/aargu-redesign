@@ -81,9 +81,9 @@ function About() {
       </section>
 
       <section className="container-page pb-24">
-        <div className="rounded-3xl bg-foreground p-10 text-background md:p-16">
+        <div className="rounded-3xl bg-ink p-10 text-ink-foreground md:p-16">
           <h2 className="max-w-2xl text-balance text-4xl md:text-5xl">Ready to bring us inside?</h2>
-          <p className="mt-4 max-w-xl text-background/70">Tell us about your goals — we'll come back with a sharp, opinionated plan within 48 hours.</p>
+          <p className="mt-4 max-w-xl text-ink-muted">Tell us about your goals — we'll come back with a sharp, opinionated plan within 48 hours.</p>
           <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground hover:opacity-90">
             Start the conversation <ArrowUpRight className="h-4 w-4" />
           </Link>

@@ -72,7 +72,7 @@ function ServiceDetail() {
       </section>
 
       <section className="container-page pb-20">
-        <div className="rounded-3xl bg-foreground p-10 text-background md:p-16">
+        <div className="rounded-3xl bg-ink p-10 text-ink-foreground md:p-16">
           <div className="grid gap-8 md:grid-cols-3">
             {[
               { k: "01", t: "Discover", d: "We audit your stack, market and competitors to find the highest-leverage moves." },
@@ -82,7 +82,7 @@ function ServiceDetail() {
               <div key={step.k}>
                 <p className="font-display text-5xl text-accent">{step.k}</p>
                 <h3 className="mt-3 text-2xl">{step.t}</h3>
-                <p className="mt-2 text-sm text-background/70">{step.d}</p>
+                <p className="mt-2 text-sm text-ink-muted">{step.d}</p>
               </div>
             ))}
           </div>

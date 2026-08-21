@@ -22,9 +22,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 grid-bg opacity-50" />
-        <div className="pointer-events-none absolute -left-32 top-20 h-[480px] w-[480px] rounded-full bg-accent/30 blur-[140px] animate-pulse-glow" />
-        <div className="pointer-events-none absolute -right-40 top-40 h-[520px] w-[520px] rounded-full bg-accent-glow/20 blur-[160px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute inset-0 grid-bg opacity-60" />
 
         <div className="container-page relative pb-28 pt-24 md:pb-36 md:pt-32">
           <div className="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
@@ -62,7 +60,6 @@ function Home() {
 
             {/* BENTO */}
             <div className="relative animate-scale-in" style={{ animationDelay: "200ms" }}>
-              <div className="absolute -inset-8 rounded-[2.5rem] bg-gradient-to-br from-accent/20 via-transparent to-accent-glow/10 blur-2xl" />
               <div className="relative grid aspect-square w-full grid-cols-6 grid-rows-6 gap-3">
                 <div className="col-span-4 row-span-3 group relative overflow-hidden rounded-3xl border border-border/80 glass p-6 hover-lift">
                   <div className="flex items-center justify-between">
@@ -72,11 +69,11 @@ function Home() {
                   <p className="mt-3 font-display text-5xl font-semibold tracking-tight">+312%</p>
                   <div className="mt-4 flex h-16 items-end gap-1.5">
                     {[28, 42, 35, 58, 48, 72, 65, 88, 76, 95].map((h, i) => (
-                      <div key={i} className="flex-1 rounded-sm bg-gradient-to-t from-accent/40 to-accent-glow transition group-hover:from-accent group-hover:to-accent-glow" style={{ height: `${h}%` }} />
+                      <div key={i} className="flex-1 rounded-sm bg-accent/40 transition group-hover:bg-accent" style={{ height: `${h}%` }} />
                     ))}
                   </div>
                 </div>
-                <div className="col-span-2 row-span-3 relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-accent to-accent-glow p-5 text-accent-foreground hover-lift">
+                <div className="col-span-2 row-span-3 relative overflow-hidden rounded-3xl bg-accent p-5 text-accent-foreground hover-lift">
                   <Target className="h-5 w-5" />
                   <p className="mt-8 text-[10px] uppercase tracking-[0.18em] opacity-80">ROAS</p>
                   <p className="mt-1 font-display text-4xl font-semibold">8.4×</p>
@@ -98,11 +95,11 @@ function Home() {
         </div>
 
         {/* LOGO MARQUEE */}
-        <div className="relative border-y border-border/60 bg-surface/40 py-6 backdrop-blur">
+        <div className="relative bg-ink py-7">
           <div className="flex overflow-hidden">
             <div className="flex shrink-0 items-center gap-16 px-8 marquee">
               {[...LOGOS, ...LOGOS].map((b, i) => (
-                <span key={i} className="whitespace-nowrap font-display text-2xl font-medium text-muted-foreground/70 transition hover:text-foreground">
+                <span key={i} className="whitespace-nowrap font-display text-2xl font-medium text-ink-muted transition hover:text-ink-foreground">
                   {b}
                 </span>
               ))}
@@ -140,10 +137,9 @@ function Home() {
                 key={s.slug}
                 to={"/services/$slug" as never}
                 params={{ slug: s.slug } as never}
-                className="group relative overflow-hidden rounded-2xl border border-border/70 bg-surface-elevated/50 p-7 backdrop-blur hover-lift hover:border-accent/40"
+                className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-7 hover-lift hover:border-accent/40"
                 style={{ animationDelay: `${i * 60}ms` }}
               >
-                <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-accent/0 blur-2xl transition duration-500 group-hover:bg-accent/30" />
                 <div className="relative flex items-start justify-between">
                   <div className="grid h-12 w-12 place-items-center rounded-xl border border-border bg-surface text-foreground transition group-hover:border-accent/50 group-hover:bg-accent/10 group-hover:text-accent">
                     <Icon className="h-5 w-5" />
@@ -160,18 +156,16 @@ function Home() {
 
       {/* SEO BAND */}
       <section className="container-page">
-        <div className="relative overflow-hidden rounded-[2rem] border border-border/80 bg-gradient-to-br from-surface-elevated via-card to-surface p-10 md:p-16">
-          <div className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-accent/40 blur-[100px] animate-pulse-glow" />
-          <div className="absolute -bottom-20 -left-20 h-[320px] w-[320px] rounded-full bg-accent-glow/30 blur-[100px]" />
+        <div className="relative overflow-hidden rounded-[2rem] bg-ink p-10 text-ink-foreground md:p-16">
           <div className="relative grid gap-12 md:grid-cols-2 md:items-center">
             <div>
-              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow">
                 <BarChart3 className="h-3.5 w-3.5" /> SEO that compounds
               </p>
               <h2 className="mt-4 text-5xl font-semibold md:text-6xl">
                 Build a moat<br />competitors <span className="text-gradient">can't buy.</span>
               </h2>
-              <p className="mt-5 max-w-md text-muted-foreground">
+              <p className="mt-5 max-w-md text-ink-muted">
                 Powerful, technical SEO that grows visibility, captures intent,
                 and converts. Long after the last ad runs.
               </p>
@@ -179,7 +173,7 @@ function Home() {
                 Learn more <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
-            <div className="glass rounded-2xl p-7">
+            <div className="rounded-2xl bg-card p-7 text-foreground shadow-soft">
               <div className="flex items-center justify-between">
                 <p className="text-sm text-muted-foreground">Free SEO audit</p>
                 <Globe2 className="h-4 w-4 text-accent" />
@@ -200,15 +194,14 @@ function Home() {
 
       {/* CTA */}
       <section className="container-page pb-28 pt-28">
-        <div className="relative overflow-hidden rounded-[2rem] border border-border/80 bg-surface-elevated/40 p-12 backdrop-blur md:p-20">
+        <div className="relative overflow-hidden rounded-[2rem] bg-ink p-12 text-ink-foreground md:p-20">
           <div className="absolute inset-0 grid-bg opacity-40" />
-          <div className="absolute -right-40 top-0 h-[400px] w-[400px] rounded-full bg-accent/20 blur-[120px] animate-pulse-glow" />
           <div className="relative max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Let's build</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow">Let's build</p>
             <h2 className="mt-4 text-balance text-6xl font-semibold md:text-7xl">
               Your growth<br />is our <span className="text-gradient">mission.</span>
             </h2>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+            <p className="mt-6 max-w-xl text-lg text-ink-muted">
               Whether you're scaling fast, breaking into new markets, or rebuilding
               your category — there's no limit to how far we can go together.
             </p>

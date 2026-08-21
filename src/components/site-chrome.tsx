@@ -16,11 +16,10 @@ export function SiteHeader() {
   const [mobileServices, setMobileServices] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-      <div className="container-page flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-accent to-accent-glow text-accent-foreground text-sm font-bold shadow-glow">A</span>
-          <span>aargu</span>
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-white/85 backdrop-blur-xl">
+      <div className="container-page flex h-20 items-center justify-between">
+        <Link to="/" className="flex items-center">
+          <img src="/logo.png" alt="Aargu" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -100,9 +99,8 @@ export function SiteFooter() {
       <div className="container-page py-16">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2 font-display text-2xl">
-              <span className="grid h-8 w-8 place-items-center rounded-md bg-foreground text-background font-sans text-sm font-bold">A</span>
-              <span>aargu</span>
+            <Link to="/" className="flex items-center">
+              <img src="/logo.png" alt="Aargu" className="h-9 w-auto" />
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               We become part of your mission, working with the same dedication and accountability as an in-house team.

@@ -58,9 +58,9 @@ function Work() {
       </section>
 
       <section className="container-page pb-24">
-        <div className="rounded-3xl border border-border bg-surface-elevated p-10 text-center md:p-16">
+        <div className="rounded-3xl bg-ink p-10 text-center text-ink-foreground md:p-16">
           <h2 className="text-balance text-4xl md:text-5xl">Want to be the next case study?</h2>
-          <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background hover:opacity-90">
+          <Link to="/contact" className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-ink-foreground px-6 py-3 text-sm font-medium text-ink hover:opacity-90">
             Let's talk <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
